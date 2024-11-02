@@ -1,8 +1,9 @@
 FROM ubuntu
 
-RUN apt-get update
-RUN apt-get install vim sudo curl -y
-
+RUN apt-get update && \
+    apt-get install -y vim sudo curl git python3 python3-pip && \
+    rm -rf /var/lib/apt/lists/*
+	
 # Install Go manually, so that we can control the version
 ARG GO_VERSION=1.22.5
 
