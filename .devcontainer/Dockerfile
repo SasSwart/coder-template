@@ -26,5 +26,5 @@ RUN useradd -m -s /bin/zsh -G sudo ${USER}
 # Install Oh My Zsh for the user
 RUN curl -Lo install.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh && \
     chmod +x install.sh && \
-    RUNZSH=no CHSH=no KEEP_ZSHRC=yes /bin/zsh install.sh && \
+    RUNZSH=no CHSH=no /bin/zsh install.sh && \
     rm install.sh
