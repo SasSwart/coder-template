@@ -1,5 +1,9 @@
 {
     "build": {
-        "dockerfile": "Dockerfile"
+        "dockerfile": "Dockerfile",
+        "args": {
+            "GO_VERSION": "1.22.5",
+            "USER": "sas"
+        }
     }
 }
